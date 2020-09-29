@@ -2,7 +2,15 @@
 
 int main()
 {
-    printf("");
+	U32int bitsvar;
+
+	printf("de cuantos bits es tu variable:\n");
+	scanf("i",&bitsvar);
+	if(bitsvar == 8||16||32)
+	{
+		printf("1-Operacion AND\n2-Operacion OR\n3-OperacionXOR");	
+	}
+	printf("tama–o de variable debe ser 8, 16, 32");
 
     return 0;
 }
