@@ -8,6 +8,9 @@ void main (void)
 	GENFUN_vCapsOff(&au8BufferTest[0], 12);
 	printf("after function %s\n", au8BufferTest);
 	
+	GENFUN_vCapsOn (&au8BufferTest[0], 12);
+	printf("after function %s\n", au8BufferTest); 
+	
 }
 Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
 {
@@ -24,5 +27,22 @@ Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
 		}
 		pu8Src++;
 		u8SizeOfList --;
+	}
+}
+void GENFUN_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfList)
+{
+	while (u8SizeOfList !=0)
+	{	
+		if( *pu8Src=> ASCII_LOW_THRESHOLD_CAPSON_TO_ON &&
+		    *pu8Src <= ASCII_HIGH_THRESHOLD_CAPSON_TO_ON)
+			{
+				*pu8Scr -= ASCII_CONVERTION_FACTOR
+			}
+			else
+			{
+				/*nothing to do*/
+			}
+			pu8Src++;
+			u8SizeOfList --;
 	}
 }
