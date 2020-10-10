@@ -3,6 +3,8 @@
 
 void main (void)
 {
+	uint8 cont=0;
+	uint8 u8Target= 101;
 	uint8 au8BufferTest[12]= "hoLA nenA BB";
 	printf("before function %s\n", au8BufferTest);
 	GENFUN_vCapsOff(&au8BufferTest[0], 12);
@@ -10,7 +12,9 @@ void main (void)
 	
 	GENFUN_vCapsOn (&au8BufferTest[0], 12);
 	printf("after function %s\n", au8BufferTest); 
-	
+
+	GENFUN_u8GetOccurence (&au8BufferTest[0],101, 12); 
+	printf("number of occurrences in string %s", cont);
 }
 Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
 {
@@ -44,5 +48,21 @@ void GENFUN_vCapsOn (uint8 *pu8Src, uint8 u8SizeOfList)
 			}
 			pu8Src++;
 			u8SizeOfList --;
+	}
+}
+uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 u8SizeOfList)
+{
+	while (u8SizeOfList !=0)
+	{
+		if( *pu8Src== u8Target)
+		{
+			cont++;
+		}
+		else
+		{
+			/*nothing to do*/
+		}
+		pu8Src++,
+		u8SizeOfList --;
 	}
 }
