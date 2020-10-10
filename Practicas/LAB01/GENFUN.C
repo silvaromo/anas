@@ -1,11 +1,13 @@
 #include "stdion.h"
 #include "GENFUN.h"
+#include "string.h"
 
 void main (void)
 {
 	
 	uint8 u8Target= 101;
 	uint8 au8BufferTest[12]= "hoLA nenA BB";
+	uint8 au8ArrayMem[8]= {9,2,5,1,9,8,7,3};
 	uint8 u8cont=0;
 	uint8 u8cont1=0;
 
@@ -21,6 +23,9 @@ void main (void)
 
 	GENFUN_u8GetAverage (&au8BufferTest[0], 12);
 	printf("the average is  %s\n", u8cont);
+
+	GENFUN_u8MemSet (&ArrayMem[0],u8Char2Set,8);
+	printf("Buffer after function is %s\n", au8ArrayMem);
 
 } 
 Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
@@ -87,5 +92,13 @@ uint8 GENFUN_u8GetAverage (uint8 *pu8Src, uint8 u8SizeOfList)
 	}
 	cont = cont1 / u8SizeOfList;
 	return cont1; 
+}
+void GENFUN_u8MemSet (uint8 *pu8Src, uint8 u8Char2Set, uint8 u8SizeOfList)
+{
+	while(u8SizeOfList-- > 0)
+	{
+		*pu8Src++ = u8Char2Set;
+	}
+	return *pu8Src;
 }
 
