@@ -25,7 +25,7 @@ void main (void)
 	printf("number of occurrences in string %s", u8cont);
 
 	GENFUN_u8GetAverage (&au8BufferTest[0], 12);
-	printf("the average is  %s\n", u8cont);
+	printf("the average is  %s\n", u8cont1);
 
 	GENFUN_u8MemSet (&ArrayMem[0],u8Char2Set,8);
 	printf("Buffer after function is %s\n", au8ArrayMem);
@@ -119,8 +119,8 @@ uint8 GENFUN_u8GetAverage (uint8 *pu8Src, uint8 u8SizeOfList)
 		pu8Src++;
 		u8SizeOfList--;
 	}
-	cont = cont1 / u8SizeOfList;
-	return cont1; 
+	u8cont1 = u8cont1 / u8SizeOfList;
+	return u8cont1; 
 }
 void GENFUN_u8MemSet (uint8 *pu8Src, uint8 u8Char2Set, uint8 u8SizeOfList)
 {

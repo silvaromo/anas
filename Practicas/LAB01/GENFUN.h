@@ -19,7 +19,7 @@ void GENFUN_vFilterSignal (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8MaxVal, uint8 
 #define u8Char2Set				40				                              
 #define ASCII_HIGH_THRESHOLD_CAPSON_TO_ON	122
 #define ASCII_LOW_THRESHOLD_CAPSON_TO_ON	97
-#define CHAR_HIGH				256
+#define CHAR_HIGH					256
 
 
 /*Data Types*/
