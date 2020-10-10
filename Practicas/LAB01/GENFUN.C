@@ -7,6 +7,7 @@ void main (void)
 	
 	uint8 u8Target= 101;
 	uint8 au8BufferTest[12]= "hoLA nenA BB";
+	uint8 au8BufferTest1[12]= "VAmos A GdL!";
 	uint8 au8ArrayMem[8]= {9,2,5,1,9,8,7,3};
 	uint8 u8cont=0;
 	uint8 u8cont1=0;
@@ -26,6 +27,11 @@ void main (void)
 
 	GENFUN_u8MemSet (&ArrayMem[0],u8Char2Set,8);
 	printf("Buffer after function is %s\n", au8ArrayMem);
+
+	GENFUN_u8MemCopy (&au8BufferTest[0],&au8BufferTest1[0],12);
+	printf("BufferTest after function %s\n",au8BufferTest1);
+	printf("BufferTest1 after function %s\n",au8BufferTest);
+
 
 } 
 Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
@@ -101,4 +107,15 @@ void GENFUN_u8MemSet (uint8 *pu8Src, uint8 u8Char2Set, uint8 u8SizeOfList)
 	}
 	return *pu8Src;
 }
+void GENFUN_u8MemCopy (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList)
+{
+	for( uint32 j=0; j< uint8 u8SizeOfList; j++)
+	{
+		pu8Scr[j]=pu8Dest[j];
+	}
+
+}
+
+
+
 
