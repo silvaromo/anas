@@ -98,7 +98,7 @@ uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 u8SizeOfList)
 	{
 		if( *pu8Src== u8Target)
 		{
-			cont++;
+			u8cont++;
 		}
 		else
 		{
@@ -115,7 +115,7 @@ uint8 GENFUN_u8GetAverage (uint8 *pu8Src, uint8 u8SizeOfList)
 	uint u8cont1; 
 	while (u8SizeOfList != 0)
 	{
-		cont1 += *pu8Src;
+		u8cont1 += *pu8Src;
 		pu8Src++;
 		u8SizeOfList--;
 	}
