@@ -11,6 +11,7 @@ void main (void)
 	uint8 au8ArrayMem[8]= {9,2,5,1,9,8,7,3};
 	uint8 u8cont=0;
 	uint8 u8cont1=0;
+	uint8 n= 0;
 
 	printf("before function %s\n", au8BufferTest);
 	GENFUN_vCapsOff(&au8BufferTest[0], 12);
@@ -32,6 +33,14 @@ void main (void)
 	printf("BufferTest after function %s\n",au8BufferTest1);
 	printf("BufferTest1 after function %s\n",au8BufferTest);
 
+	
+	GENFUN_vSortList (&au8ArrayMem[0], &au8ArrayMem[0], 8);
+	printf("Array after function ")
+
+	for(n=0; n<8; n++)
+	{
+		printf("%i", au8ArrayMem[n];
+	}
 
 } 
 Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
@@ -112,6 +121,19 @@ void GENFUN_u8MemCopy (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList)
 	for( uint32 j=0; j< uint8 u8SizeOfList; j++)
 	{
 		pu8Scr[j]=pu8Dest[j];
+	}
+
+}
+void GENFUN_vSortList (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList)
+{
+	for(uint32 i=0; i< uint8 u8SizeOfList; i++)
+	{
+		for(uint32 j=0; j< uint8 u8SizeOfList; j++)
+		{
+			uint8 u8SaveSentence= pu8Scr[i];
+			pu8Src[i]= pu8Scr[j];
+			pu8Scr[j]= u8SaveSentence;
+		}
 	}
 
 }
