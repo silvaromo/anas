@@ -12,6 +12,7 @@ void main (void)
 	uint8 u8cont=0;
 	uint8 u8cont1=0;
 	uint8 n= 0;
+	uint8 au8NumRand[255];
 
 	printf("before function %s\n", au8BufferTest);
 	GENFUN_vCapsOff(&au8BufferTest[0], 12);
@@ -40,6 +41,19 @@ void main (void)
 	for(n=0; n<8; n++)
 	{
 		printf("%i", au8ArrayMem[n];
+	}
+
+	srand(time(NULL));
+	for(n=0; n<CHAR_HIGH-1; n++)
+	{
+	printf("%i\n", au8NumRand[n]);
+	}
+	GENFUN_vSoftSignal (&au8NumRand, &au8NumRand)
+	printf("Soft Signal");
+
+	for(n=0; n<CHAR_HIGH-1; n++)
+	{
+	printf("%i\n", au8NumRand[n]);
 	}
 
 } 
@@ -138,6 +152,12 @@ void GENFUN_vSortList (uint8 *pu8Src, uint8 *pu8Dest, uint8 u8SizeOfList)
 
 }
 
-
+void GENFUN_vSoftSignal (uint8 *pu8Src, uint8 *pu8Dest)
+{
+	for(uint i=0; i<CHAR_HIGH; i++)
+	{
+		pu8Dest[i]=(pu8Scr[i]+pu8Scr[i+1])/2;
+	}
+}
 
 
