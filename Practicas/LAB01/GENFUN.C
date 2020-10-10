@@ -6,6 +6,9 @@ void main (void)
 	
 	uint8 u8Target= 101;
 	uint8 au8BufferTest[12]= "hoLA nenA BB";
+	uint8 u8cont=0;
+	uint8 u8cont1=0;
+
 	printf("before function %s\n", au8BufferTest);
 	GENFUN_vCapsOff(&au8BufferTest[0], 12);
 	printf("after function %s\n", au8BufferTest);
@@ -15,7 +18,11 @@ void main (void)
 
 	GENFUN_u8GetOccurence (&au8BufferTest[0],101, 12); 
 	printf("number of occurrences in string %s", u8cont);
-}
+
+	GENFUN_u8GetAverage (&au8BufferTest[0], 12);
+	printf("the average is  %s\n", u8cont);
+
+} 
 Void GENFUN_vCapsOff (uint8 *pu8Src, uint8 u8SizeOfList)
 {
 	while (u8SizeOfList !=0)
@@ -68,3 +75,17 @@ uint8 GENFUN_u8GetOccurence (uint8 *pu8Src, uint8 u8Target, uint8 u8SizeOfList)
 	}
 return u8cont;
 }
+
+uint8 GENFUN_u8GetAverage (uint8 *pu8Src, uint8 u8SizeOfList)
+{
+	uint u8cont1; 
+	while (u8SizeOfList != 0)
+	{
+		cont1 += *pu8Src;
+		pu8Src++;
+		u8SizeOfList--;
+	}
+	cont = cont1 / u8SizeOfList;
+	return cont1; 
+}
+
