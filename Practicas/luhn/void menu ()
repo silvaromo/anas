@@ -1,2 +1,21 @@
-void menu ()
-	uint8
+uint8 u8LuhnCheck ( uint8 *pu8Data );
+
+void main ( void )
+{
+	uint8 au8CardNumber[16]={5,2,0,4,1,6,5,5,0,9,4,8,3,6,9,3};
+	uint8 au8Check = 0;
+
+	u8Check= u8LuhnCheck (&au8CardNumber[0]);
+	if (u8Check == 0)
+	{
+
+	}
+	else
+	{
+
+	}
+}
+uint8 u8LuhnCheck ( uint8 *pu8Data )
+{
+	
+}
