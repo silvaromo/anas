@@ -10,11 +10,11 @@ void main ( void )
 	au8Check= u8LuhnCheck (&au8CardNumber[0]);
 	if (au8Check == 0)
 	{
-	    printf("correcto");
+	    printf("tarjeta valida");
 	}
 	else
 	{
-	    printf("incorrecto");
+	    printf("tarjeta valida");
 	}
 }
 int u8LuhnCheck ( int *pu8Data )
@@ -25,6 +25,7 @@ int u8LuhnCheck ( int *pu8Data )
 	int cociente;
 	int residuo;
 	int suma;
+//este for se utiliza para mover de posiciones y multiplicar por 2 las posiciones pares
 	for(x=0; x<16; x=x+2)
 	{
 	    au8CardNumber2[x]=pu8Data[x]*2;
@@ -40,12 +41,13 @@ int u8LuhnCheck ( int *pu8Data )
 	       
 	    }
 	}
+	/*For utilizado para verificar que las operaciones son correctas 
 	for(x=0; x<16; x++)
 	{
 	    printf("  %i,%i \n",x ,au8CardNumber2[x]);
 	    
 	}
-	
+	*/
 	suma=0;
 	for(x=0; x<16; x++)
 	{
