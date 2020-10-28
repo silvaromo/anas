@@ -7,13 +7,13 @@ MENU:
 3.cuanto dinero hay si cuesta 10 cada que entra
 *******************************************************************************/
 #include <stdio.h>
-void vista_aerea(int espacios_dispo[]);
-#define TOTAL 30
-int main()
+#include <GENFUN.H>
+
+void main(void)
 {
-    int espacios_dispo[TOTAL]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
-    int opcion=0, entrar=0,num2=0, x=0,i,resultado;
-    int *punt;
+    uint8 espacios_dispo[TOTAL]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
+    uint8 opcion=0, entrar=0,num2=0, x=0,i,resultado;
+    uint8 *punt;
     punt=&espacios_dispo[0];
     do{
         printf("\n-------------------------------------\n");
@@ -59,9 +59,9 @@ int main()
     
     return 0;
 }
-void vista_aerea(int espacios_dispo[])
+void vista_aerea(uint8 espacios_dispo[])
 {
-    int i,vista=0;
+    uint32 i,vista=0;
     for(i=0;i<TOTAL;i++)
     {
         printf("%i ", espacios_dispo[i]);
