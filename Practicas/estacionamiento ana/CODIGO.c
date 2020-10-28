@@ -9,11 +9,11 @@ MENU:
 #include <stdio.h>
 #include "GENFUN.H"
 
-int main(void)
+void main(void)
 {
-    uint8 espacios_dispo[TOTAL]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
-    uint8 opcion=0, entrar=0,num2=0, x=0,i,resultado;
-    uint8 *punt;
+    uint32 espacios_dispo[TOTAL]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
+    uint32 opcion=0, entrar=0,num2=0, x=0,i,resultado;
+    uint32 *punt;
     punt=&espacios_dispo[0];
     do{
         printf("\n-------------------------------------\n");
@@ -50,8 +50,8 @@ int main(void)
                 break;
             case 4:
                 printf("Gracias por su visita, vuelva pronto\n");
-                 printf("El 0 es espacio ocupado y los números a partis de 0 están disponibles\n");
-                 vista_aerea(espacios_dispo);
+                printf("El 0 es espacio ocupado y los números a partis de 0 están disponibles\n");
+                vista_aerea(espacios_dispo);
                     
             }
             
@@ -59,7 +59,7 @@ int main(void)
     
     return 0;
 }
-void vista_aerea(int u8espacios_dispo[])
+void vista_aerea(int espacios_dispo[])
 {
     uint8 i,vista=0;
     for(i=0;i<TOTAL;i++)
