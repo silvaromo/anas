@@ -1,6 +1,6 @@
 
 
-void vista_aerea(uint8 espacios_dispo[]);
+void vista_aerea(int u8espacios_dispo[]);
 
 #define TOTAL 30
 
