@@ -24,8 +24,8 @@ int main()
   do{
        system("cls");
        printf("hay 3 niveles");
-       printf("~Ingresa el nivel del juego:\n%d.-Nivel 1\n", 1);
-       printf("%d.-Nivel 2\n%d.-Nivel 3\n", 2, 3);
+       printf("~Ingresa el nivel del juego:\n%d.-Nivel 1: 10 bombas\n", 1);
+       printf("%d.-Nivel 2: 20 bombas\n%d.-Nivel 3: 30 bombas\n", 2, 3);
       
        scanf("%d", &nivel);
       /*niveles*/
@@ -40,7 +40,7 @@ int main()
            case 3: bombas = 30;
                    break;
                   
-           default: printf("Seleccion invalida, intente de nuevo.\n\n");
+           default: printf("Seleccion invalida\n\n");
                     break;                 
                     
        }
@@ -59,7 +59,7 @@ int main()
           
            printf("\n"); //nueva linea
           
-           printf("*Ingrese la tirada[i, j]: ");
+           printf("*Ingresar coordenada [i, j]: ");
            scanf("%d%d",&i, &j);
           
            if(buscaminas[i][j] == 3){                              
@@ -69,7 +69,7 @@ int main()
                system("cls");
                imprimir_tablero(buscaminas, gameStatus);
             //   gotoxy(80, 4);
-               printf("\t\t\t\t\t  ¡¡¡Perdiste, el juego ha terminado!!");
+               printf("\t\t\t\t\t  ¡¡¡Perdiste, suerte a la proxima!!");
               
                getch();              
            }
@@ -85,7 +85,7 @@ int main()
                system("cls");
                imprimir_tablero(buscaminas, gameStatus);
          //      gotoxy(80, 4);
-               printf("\t\t\t\t\t  ¡¡¡Has ganado, felicidades!!");
+               printf("\t\t\t\t\t  ¡¡¡Has ganado, eres un crack!!");
       
                getch();
            }       
@@ -94,7 +94,7 @@ int main()
        }while(gameStatus != -1 || victoria == 1);
       
        system("cls");
-       printf("*No. de tiradas %d.\n\n", tiradas);
+       printf("*Numero de intentos %d.\n\n", tiradas);
       
        printf("\n\n");
       
