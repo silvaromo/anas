@@ -101,6 +101,7 @@ int main()
        printf("¿Desea jugar de nuevo(S/N)?: ");
       
        salida = getch();
+       /*tolower sirve para sumar a algun caracter 32 posiciones en ascci*/
        salida = tolower(salida);
       
        for(i = 0; i <= RENGLON - 1; i++)
